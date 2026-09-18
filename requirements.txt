@@ -11,8 +11,11 @@ python-jose[cryptography]
 passlib
 bcrypt
 email-validator
+opencv-python-headless
+gtts
 openai
 openai-whisper
 elevenlabs
 pydub
-opencv-python-headless
+websockets
+aiofiles
