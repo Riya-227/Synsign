@@ -217,8 +217,9 @@ export default function DashboardPage() {
     const token = localStorage.getItem("synsign_token");
     if (!token) { router.push("/auth"); return; }
 
-    // 2. Fetch authenticated user data using Bearer token to prevent 401 Unauthorized
-    axios.get("http://127.0.0.1:8000/api/v1/auth/me", { headers: { Authorization: `Bearer ${token}` } })
+    
+    // 2. Fetch authenticated user data using Bearer token from live Render backend
+    axios.get("https://synsign.onrender.com/api/v1/auth/me", { headers: { Authorization: `Bearer ${token}` } })
     .then((res) => {
       setUser(res.data);
       if (res.data.full_name) setFullName(res.data.full_name);
