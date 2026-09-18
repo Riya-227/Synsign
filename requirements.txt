@@ -3,10 +3,15 @@ uvicorn
 pydantic
 pydantic-settings
 python-dotenv
+python-multipart
 sqlalchemy
 pandas
 numpy
-python-multipart
 python-jose[cryptography]
-bcrypt
 passlib
+bcrypt
+email-validator
+openai
+openai-whisper
+elevenlabs
+pydub
