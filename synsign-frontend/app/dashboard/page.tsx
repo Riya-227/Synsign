@@ -615,7 +615,7 @@ export default function DashboardPage() {
         <header className="h-20 border-b px-8 flex items-center justify-between sticky top-0 z-20 backdrop-blur-md bg-[#0c1612]/80 border-emerald-950 text-white">
           <div>
             <h1 className="text-xl font-serif font-bold">Welcome back, {fullName.split(" ")[0] || "User"}</h1>
-            <p className="text-xs text-slate-400">Your AI translation engines are fully operational.</p>
+            <p className="text-xs text-slate-400">Breaking barriers, one sign at a time</p>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={handleLogout} className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer border bg-slate-800/80 border-slate-700 text-slate-300 hover:bg-rose-950/40 hover:text-rose-400"><Power size={14} /> Sign Out</button>
