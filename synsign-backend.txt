@@ -1,0 +1,23 @@
+synsign-backend/
+├── app/
+│   ├── api/
+│   │   ├── endpoints/
+│   │   │   ├── auth.py         # User Authentication & JWT
+│   │   │   ├── gesture.py      # AI Gesture Recognition
+│   │   │   ├── stt_tts.py      # Speech-to-Text & Text-to-Speech
+│   │   │   ├── translation.py  # Text/Speech to ISL Avatar Pipeline
+│   │   │   └── dictionary.py   # ISL Dictionary & Search
+│   │   └── router.py           # Main API router combining endpoints
+│   ├── core/
+│   │   ├── config.py           # Environment variables & app settings
+│   │   └── security.py         # Password hashing & JWT token logic
+│   ├── db/
+│   │   ├── database.py         # Database connection setup
+│   │   └── models.py           # SQLAlchemy / Database Schemas
+│   ├── services/
+│   │   ├── cv_model.py         # MediaPipe / PyTorch model loading & inference
+│   │   ├── speech.py           # Whisper / Speech recognition integrations
+│   │   └── isl_translator.py   # Text-to-Gloss & animation mapping rules
+│   └── main.py                 # FastAPI application entry point
+├── requirements.txt
+└── README.md
