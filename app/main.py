@@ -13,6 +13,7 @@ from app.core.config import settings
 from app.core.database import engine, Base
 from app.models.user import User  # Ensures User model is registered with Base
 from app.services.history.router import router as history_router
+
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
@@ -32,7 +33,7 @@ Base.metadata.create_all(bind=engine)
 # ---------------------------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origins=["*"],  # <-- Yahan update kiya gaya hai CORS block rokne ke liye
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

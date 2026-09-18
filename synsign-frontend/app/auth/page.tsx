@@ -29,7 +29,8 @@ export default function AuthPage() {
         formData.append("username", username);
         formData.append("password", password);
 
-        const response = await axios.post("http://127.0.0.1:8000/api/v1/auth/login", formData, {
+        // UPDATE: Login route now points to the live Render backend
+        const response = await axios.post("https://synsign.onrender.com/api/v1/auth/login", formData, {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         });
         
@@ -39,7 +40,8 @@ export default function AuthPage() {
 
       } else {
         setStatusMsg("Creating your profile...");
-        await axios.post("http://127.0.0.1:8000/api/v1/auth/signup", {
+        // UPDATE: Signup route now points to the live Render backend
+        await axios.post("https://synsign.onrender.com/api/v1/auth/signup", {
           username: username,
           email: email,
           password: password,
